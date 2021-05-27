@@ -19,11 +19,24 @@
 			
 			}*/
 
-let informations = prompt("Write down your informations and sepraraty by comas." + 
-" First you user name,name,last name , age , team ,city");
-console.log(informations);
 
-function playerInput(trakkingNumber,firstName,lastName,age,team,city) {
+
+
+function id(a) {
+	return document.getElementById(a);
+	};
+
+let inputUserName = id("inputUserName");
+
+
+
+function a() {
+	return 	playerInput(arrayOfInformations[1],arrayOfInformations[2],arrayOfInformations[3],arrayOfInformations[4],arrayOfInformations[5]);
+};
+var player1 = a();	
+
+
+function playerInput(firstName,lastName,age,team,city) {
 	 	return  { firstName:`${firstName}`,
 			lastName:`${lastName}`,
 			age:`${age}`,
