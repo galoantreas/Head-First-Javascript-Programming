@@ -27,22 +27,41 @@ function id(a) {
 	};
 
 let inputUserName = id("inputUserName");
+let inputName = id("inputName");
+let inputLastName = id("inputLastName");
+let inputAge = id("inputAge");
+let inputTeam = id("inputTeam");
+let inputCity = id("inputCity");
+let btnSubmit = id("btnSubmit");
+
+
+console.log(inputUserName,inputName,inputLastName,inputAge,inputTeam,inputCity);
 
 
 
-function a() {
-	return 	playerInput(arrayOfInformations[1],arrayOfInformations[2],arrayOfInformations[3],arrayOfInformations[4],arrayOfInformations[5]);
+function a(i) {
+	return 	playerInput(i,inputName.value,inputLastName.value,inputAge.value,inputTeam.value,inputCity.value);
 };
-var player1 = a();	
+let players = {}
 
+btnSubmit.addEventListener("click", (event) => {
+	let count = 0;
+	    count ++;
+
+		for (let i = 0;i > count;i++) {
+			 players = a([i]);		
+		}
+	})
 
 function playerInput(firstName,lastName,age,team,city) {
-	 	return  { firstName:`${firstName}`,
-			lastName:`${lastName}`,
-			age:`${age}`,
-			team:`${team}`,
-			city:`${city}`			
-			};
+	 	return  players { player[i]: { firstName:`${firstName}`,
+					     lastName:`${lastName}`,
+					     age:`${age}`,
+					     team:`${team}`,
+					     city:`${city}`			
+				};
+										
+				}
 
 		 
 }
