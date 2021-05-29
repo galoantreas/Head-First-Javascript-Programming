@@ -39,29 +39,33 @@ console.log(inputUserName,inputName,inputLastName,inputAge,inputTeam,inputCity);
 
 
 
-function a(i) {
-	return 	playerInput(i,inputName.value,inputLastName.value,inputAge.value,inputTeam.value,inputCity.value);
+function a() {
+	return 	playerInput(inputName.value,inputLastName.value,inputAge.value,inputTeam.value,inputCity.value);
 };
-let players = {}
+let players = [];
 
 btnSubmit.addEventListener("click", (event) => {
+	event.preventDefault();
 	let count = 0;
 	    count ++;
+	console.log(count);
+		for (let i = 0;i < count;i++) {
+			let obj = a();	
+			players.push(obj);	
 
-		for (let i = 0;i > count;i++) {
-			 players = a([i]);		
+		console.log("a");	
 		}
 	})
 
 function playerInput(firstName,lastName,age,team,city) {
-	 	return  players { player[i]: { firstName:`${firstName}`,
-					     lastName:`${lastName}`,
-					     age:`${age}`,
-					     team:`${team}`,
-					     city:`${city}`			
-				};
-										
+	 	return  { firstName:`${firstName}`,
+			    lastName:`${lastName}`,
+			    age:`${age}`,
+			    team:`${team}`,
+			    city:`${city}`			
 				}
+										
+				
 
 		 
 }
