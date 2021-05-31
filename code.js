@@ -35,6 +35,8 @@ let inputCity = id("inputCity");
 let btnSubmit = id("btnSubmit");
 
 
+
+
 console.log(inputUserName,inputName,inputLastName,inputAge,inputTeam,inputCity);
 
 
@@ -65,7 +67,47 @@ function playerInput(firstName,lastName,age,team,city) {
 			    city:`${city}`			
 				}
 										
-				
-
 		 
 }
+
+
+// make a function that takes an input and find the player
+
+let findUserInput = id("findUser");
+let btnFindUser = id("btnFindUser");
+let displayResuld = id("displayUser");
+
+
+function findPlayer() {
+	let findThisUser = findUserInput.value;
+	for (let i = 0; i < players.legnthl; i++) {
+	let searchForTheUser =  players[i]
+		if (searchForTheUser.firstName == findThisUser) {
+				console.log(searchForTheUser.age);
+				displayResuld.innerHTML = `Age : ${searchForTheUser.age}`;			
+			}	
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
