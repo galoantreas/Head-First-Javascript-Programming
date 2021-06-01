@@ -77,17 +77,24 @@ let findUserInput = id("findUser");
 let btnFindUser = id("btnFindUser");
 let displayResuld = id("displayUser");
 
+btnFindUser.addEventListener("click",findPlayer);
 
 function findPlayer() {
-	let findThisUser = findUserInput.value;
-	for (let i = 0; i < players.legnthl; i++) {
-	let searchForTheUser =  players[i]
-		if (searchForTheUser.firstName == findThisUser) {
-				console.log(searchForTheUser.age);
-				displayResuld.innerHTML = `Age : ${searchForTheUser.age}`;			
-			}	
+	event.preventDefault();
+	let userLooksForThisAcount = findUserInput.value
+	for  (let i = 0; i < players.length; i++) {
+	let searchForTheAccount = players[i].firstName
+		if (userLooksForThisAcount == players[i].firstName ) {
+				console.log("d");
+				displayResuld.innerHTML = `<h4>First Name:${players[i].firstName}</h4>
+						 <h4>Last Name:${players[i].lastName}</h4>
+						 <h4>Age:${players[i].age}</h4>
+						 <h4>Team:${players[i].team}</h4>
+						 <h4>City:${players[i].city}</h4>`;			
+			}
 	}
-	
+
+
 }
 
 
