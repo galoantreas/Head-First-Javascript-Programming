@@ -20,6 +20,16 @@
 				console.log("Bubble tests: " + scores.length);
 				console.log("Hihgest bubble score: " + highScore);	
 
+				var bestSolutions = [];
+			
+				for (var i = 0; i <scores.length;i++) {
+					if(scores[i] == highScore) {
+						bestSolutions.push(i);					
+					}				
+				}
+
+			console.log("Solution with the highest score: " + bestSolutions);
+
 		</script>	
 	</head>
 	<body></body>
