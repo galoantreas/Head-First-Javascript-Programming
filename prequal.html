@@ -13,7 +13,21 @@
 					color:"yellow",
 					passengers: 4,
 					convertible:false,
-					mileage:281341
+					mileage:281341,
+					started: false,
+					start: function() {
+						this.started = true;			
+					},
+					stop: function() {
+						this.started = false;			
+					},
+					drive: function() {
+						if (this.started) {
+						alert(this.make + "" + this.model + " qoes Zoom zoom !");
+						} else {
+						alert("You need to start the engine first.")	
+						}					
+					}
 				};
 
 			var cadi = {
@@ -23,7 +37,21 @@
 					color:"tan",
 					passengers: 5,
 					convertible:false,
-					mileage:12892
+					mileage:12892,
+					started: false,
+					start: function() {
+						this.started = true;			
+					},
+					stop: function() {
+						this.started = false;			
+					},
+					drive: function() {
+						if (this.started) {
+						alert(this.make + "" + this.model + " qoes Zoom zoom !");
+						} else {
+						alert("You need to start the engine first.")	
+						}					
+					}
 				};
 
 			var fiat = {
@@ -36,14 +64,14 @@
 					mileage:88000,
 					started: false,
 					start: function() {
-						started:true;			
+						this.started = true;			
 					},
 					stop: function() {
-						started:false;			
+						this.started = false;			
 					},
 					drive: function() {
-						if (started) {
-						alert("Zoom zoom !");
+						if (this.started) {
+						alert(this.make + "" + this.model + " qoes Zoom zoom !");
 						} else {
 						alert("You need to start the engine first.")	
 						}					
@@ -57,7 +85,21 @@
 					color:"red",
 					passengers: 2,
 					convertible:false,
-					mileage:1021
+					mileage:1021,
+					started: false,
+					start: function() {
+						this.started = true;			
+					},
+					stop: function() {
+						this.started = false;			
+					},
+					drive: function() {
+						if (this.started) {
+						alert(this.make + "" + this.model + " qoes Zoom zoom !");
+						} else {
+						alert("You need to start the engine first.")	
+						}					
+					}
 				};				
 				
 	
