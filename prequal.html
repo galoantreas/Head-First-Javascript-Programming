@@ -15,18 +15,35 @@
 					convertible:false,
 					mileage:281341,
 					started: false,
+					fuel:0,
 					start: function() {
-						this.started = true;			
+						if (this.fuel == 1) {
+						 alert("Your almost out of fuel.")
+						 this.started = true;
+						} else if (this.fuel > 0) {
+						 this.started = true;
+						} else {
+						 alert("This car is on empty, fill up before starting!");						
+						}			
 					},
 					stop: function() {
 						this.started = false;			
 					},
 					drive: function() {
 						if (this.started) {
-						alert(this.make + "" + this.model + " qoes Zoom zoom !");
+							if (this.fuel > 0) {
+								alert(this.make + " " + this.model + " qoes Zoom zoom !");
+								this.fuel = this.fuel - 1;
+							} else {
+								alert("Uh oh,out of Fuel.")								
+							}
+
 						} else {
-						alert("You need to start the engine first.")	
+							alert("You need to start the engine first.")	
 						}					
+					},
+					addFuel: function(amount) {
+						this.fuel = this.fuel + amount;					
 					}
 				};
 
